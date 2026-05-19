@@ -155,6 +155,6 @@ List<Node> _toFlatList(ObjectNode root) {
 
 extension on StringBuffer {
   String toFlatString() {
-    return toString().split('\n').map((e) => e.trim()).join(' ');
+    return toString().split('\n').map((e) => e.trim()).where((e) => e.isNotEmpty).join(' ');
   }
 }

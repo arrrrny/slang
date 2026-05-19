@@ -35,7 +35,7 @@ class TranslationsDe extends Translations with BaseTranslations<AppLocale, Trans
 
 	late final TranslationsDe _root = this; // ignore: unused_field
 
-	@override 
+	@override
 	TranslationsDe $copyWith({TranslationMetadata<AppLocale, Translations>? meta}) => TranslationsDe(meta: meta ?? this.$meta);
 
 	// Translations
@@ -57,7 +57,7 @@ class TranslationsDe extends Translations with BaseTranslations<AppLocale, Trans
 extension on TranslationsDe {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'greet' => ({required Gender context}) { switch (context) { case Gender.male: return 'Hallo Herr'; case Gender.female: return 'Hello Mrs'; } }, 
+			'greet' => ({required Gender context}) { switch (context) { case Gender.male: return 'Hallo Herr'; case Gender.female: return 'Hello Mrs'; } },
 			_ => null,
 		};
 	}
