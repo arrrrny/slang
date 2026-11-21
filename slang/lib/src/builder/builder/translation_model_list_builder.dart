@@ -173,6 +173,9 @@ extension on Map<String, Map<String, dynamic>> {
     }
 
     if (length > 1 && containsKey(RegexUtils.defaultNamespace)) {
+      // Merge the default namespace's entries up to the top level. The base is
+      // read from `this` (the original map) while the dot-nested entries come
+      // from `curr` (the rewritten map above), so both views are combined.
       curr = {
         ...this[RegexUtils.defaultNamespace]!,
         ...{

@@ -367,7 +367,7 @@ void _generateClass(
   if (root) {
     buffer.writeln();
     if (!localeData.base) {
-      buffer.writeln('\t@override ');
+      buffer.writeln('\t@override');
     }
     buffer.writeln(
         '\t$rootClassName \$copyWith({TranslationMetadata<${config.enumName}, ${config.className}>? meta}) => $rootClassName(meta: meta ?? this.\$meta);');

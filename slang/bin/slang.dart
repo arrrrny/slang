@@ -202,25 +202,25 @@ void main(List<String> arguments) async {
     case RunnerMode.outdated:
       await runEdit(
         fileCollection: fileCollection,
-        arguments: arguments,
+        arguments: filteredArguments,
       );
       break;
     case RunnerMode.add:
       await runEdit(
         fileCollection: fileCollection,
-        arguments: arguments,
+        arguments: filteredArguments,
       );
       break;
     case RunnerMode.clean:
       await runClean(
         fileCollection: fileCollection,
-        arguments: arguments,
+        arguments: filteredArguments,
       );
       break;
     case RunnerMode.normalize:
       await runNormalize(
         fileCollection: fileCollection,
-        arguments: arguments,
+        arguments: filteredArguments,
       );
       break;
     case RunnerMode.wip:
